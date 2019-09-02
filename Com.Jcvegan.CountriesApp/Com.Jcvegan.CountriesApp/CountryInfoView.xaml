@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Com.Jcvegan.CountriesApp.CountryInfoView">
+    <TableView HasUnevenRows="true" BindingContext="{Binding Country}">
+        <TableRoot>
+            <TableSection Title="Geographic">
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label>Name</Label>
+                            <Label Text="{Binding Name}"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label>Capital</Label>
+                            <Label Text="{Binding Capital}"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label>Region</Label>
+                            <Label Text="{Binding Region}"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Margin="5">
+                            <Label>Subregion</Label>
+                            <Label Text="{Binding Subregion}"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
